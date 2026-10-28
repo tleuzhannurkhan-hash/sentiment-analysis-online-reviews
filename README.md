@@ -7,7 +7,7 @@ The goal of this project is to answer a simple question:
 > *Which classical ML algorithm works better for sentiment classification of online reviews — Logistic Regression or Naive Bayes — and where do both models make mistakes?*
 
 ## Dataset & Preprocessing
-- **Dataset:** IMDb Movie Reviews (random sample of 5,000 reviews: 4,000 for training, 1,000 for testing).
+- **Dataset:** IMDb Movie Reviews (random sample of 5,000 reviews: 2,519 positive and 2,481 negative; split into 4,000 for training and 1,000 for testing).
 - **Preprocessing:** Removed HTML `<br />` tags and punctuation, lowercased the text, and vectorized reviews using `TfidfVectorizer` (`max_features=5000`, English stop words removed).
 
 ## Results
@@ -19,7 +19,9 @@ Evaluation on the test set (1,000 reviews):
 | Logistic Regression | **84.8%** | 0.8321 | **0.8750** | **0.8530** |
 | Naive Bayes | 83.5% | **0.8480** | 0.8194 | 0.8335 |
 
-
+<p align="center">
+<img src="./sentiment_analysis_comparison.png" alt="Model Comparison and Confusion Matrices" width="100%">
+</p>
 
 ### Observations
 1. **Logistic Regression vs Naive Bayes:**
